@@ -10,5 +10,10 @@ Checking_Account::Checking_Account(std::string name, double balance)
 
 bool Checking_Account::withdraw(double amount) {
     balance = balance - 1.5;
-    return Account::withdraw(balance);
+    return Account::withdraw(amount);
+}
+
+std::ostream &operator<<(std::ostream &os, const Checking_Account &account) {
+    os<<"Checking Account: "<<account.name<<"; Balance: "<<account.balance;
+    return os;
 }
