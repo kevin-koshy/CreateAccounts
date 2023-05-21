@@ -88,3 +88,10 @@ void withdraw(std::vector<Checking_Account> &accounts, double amount){
             std::cout<<"Failed withdrawal of "<< amount <<" from "<< acc <<std::endl;
     }
 }
+
+void display(const std::vector<Trust_Account> &accounts) {
+    std::cout << "\n=== Trust Accounts ====================================" << std::endl;
+    for (const auto &acc: accounts)
+        std::cout << acc << std::endl;
+
+}
