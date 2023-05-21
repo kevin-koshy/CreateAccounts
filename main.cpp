@@ -54,12 +54,24 @@ int main() {
     vector<Trust_Account> trust_accounts;
     trust_accounts.push_back(Trust_Account {} );
     trust_accounts.push_back(Trust_Account {"Bon Jovie"} );
-    trust_accounts.push_back(Trust_Account {"Sting", 2000} );
+    trust_accounts.push_back(Trust_Account {"Sting", 2000, 1.5} );
     trust_accounts.push_back(Trust_Account {"ColdPlay", 5000, 3});
 
     display(trust_accounts);
-//    deposit(trust_accounts, 1000);
-//    withdraw(trust_accounts, 2000);
+    deposit(trust_accounts, 1000);
+    withdraw(trust_accounts, 2000);
+
+    display(trust_accounts);
+
+    withdraw(trust_accounts, 100);
+    display(trust_accounts);
+    withdraw(trust_accounts, 100);
+    display(trust_accounts);
+    withdraw(trust_accounts, 100);
+    display(trust_accounts);
+    withdraw(trust_accounts, 100);
+    display(trust_accounts);
+
 
     return 0;
 }
